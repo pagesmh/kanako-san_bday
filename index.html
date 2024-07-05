@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 40px;
+            width: 500px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #ff69b4;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .name {
+            font-family: 'Pacifico', cursive;
+            color: #4a4a4a;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .balloon {
+            font-size: 60px;
+            margin: 20px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f0f0f0;
+            position: absolute;
+            animation: confetti 5s ease-in-out infinite;
+        }
+        .cake {
+            font-size: 80px;
+            margin-top: 30px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes confetti {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(1000%) rotate(720deg); opacity: 0; }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .balloon-container {
+            position: absolute;
+            bottom: -50px;
+            animation: rise 10s linear infinite;
+        }
+        @keyframes rise {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-1000px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="balloon">🎈</div>
+        <h1>Happy Birthday!</h1>
+        <div class="name">Kanako-san</div>
+        <p>お誕生日おめでとうございます！</p>
+        <p>素晴らしい一年になりますように、健康と幸せを心からお祈り申し上げます。</p>
+        <p>新田さんとの共同生活も笑顔と喜びで溢れ、ますます素晴らしいものになることを心から願っています。</p>
+        <p>Sincerely, Mohammad.</p>
+        <div class="cake">🎂</div>
+        
+        <!-- Confetti -->
+        <div class="confetti" style="left: 10%; animation-delay: 0s; background-color: #ff69b4;"></div>
+        <div class="confetti" style="left: 20%; animation-delay: 1s; background-color: #87CEFA;"></div>
+        <div class="confetti" style="left: 30%; animation-delay: 2s; background-color: #FFD700;"></div>
+        <div class="confetti" style="left: 40%; animation-delay: 3s; background-color: #98FB98;"></div>
+        <div class="confetti" style="left: 50%; animation-delay: 4s; background-color: #DDA0DD;"></div>
+        <div class="confetti" style="left: 60%; animation-delay: 0.5s; background-color: #FF6347;"></div>
+        <div class="confetti" style="left: 70%; animation-delay: 1.5s; background-color: #00CED1;"></div>
+        <div class="confetti" style="left: 80%; animation-delay: 2.5s; background-color: #FFA500;"></div>
+        <div class="confetti" style="left: 90%; animation-delay: 3.5s; background-color: #FF1493;"></div>
+        
+        <!-- Balloons -->
+        <div class="balloon-container" style="left: 10%; animation-delay: 0s;">🎈</div>
+        <div class="balloon-container" style="left: 30%; animation-delay: 2s;">🎈</div>
+        <div class="balloon-container" style="left: 50%; animation-delay: 4s;">🎈</div>
+        <div class="balloon-container" style="left: 70%; animation-delay: 1s;">🎈</div>
+        <div class="balloon-container" style="left: 90%; animation-delay: 3s;">🎈</div>
+    </div>
+</body>
+</html>
